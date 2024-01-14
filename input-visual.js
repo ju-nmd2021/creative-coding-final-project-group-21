@@ -1,5 +1,3 @@
-
-let flow = [];
 let particles = [];
 let scale, theme, graphics;
 
@@ -10,9 +8,7 @@ function setup() {
 
 function draw() {
   background(0);
-
-  // Add any other animations or updates here
-
+  
   for (const p of particles) {
     p.update();
     p.draw();
