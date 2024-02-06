@@ -1,22 +1,6 @@
-
 // Initial minY and maxY values
 let minYchange = 10;
 let maxYchange = 80;
-
-// Function to update minY value
-// function updateMinY() {
-//     const minYInput = document.getElementById('minY');
-//     minYchange = parseInt(minYInput.value, 10);
-//     console.log('minYchange updated:', minYchange);
-// }
-
-// Function to update maxY value
-function updateMaxY() {
-    const maxYInput = document.getElementById('maxY');
-    maxYchange = parseInt(maxYInput.value, 10);
-    console.log('maxYchange updated:', maxYchange);
-}
-
 
 // Function to update minY value
 function updateMinY() {
@@ -25,11 +9,28 @@ function updateMinY() {
     
     if (!isNaN(value) && value >= 0 && value <= 100) {
         minYchange = value; 
+        minYInput.value = "";
         document.getElementById('currentOverlap').textContent = minYchange;
         console.log('minYchange updated:', minYchange);
     } else {
         console.error('Invalid input for minY:', minYInput.value);
         alert('Please enter a valid number for Overlap between 0 and 100.');
+    }
+}
+
+// Function to update maxY value
+function updateMaxY() {
+    const maxYInput = document.getElementById('maxY');
+    const value = parseInt(maxYInput.value, 10); // Initial minY is 80
+    
+    if (!isNaN(value) && value >= 0 && value <= 100) {
+        maxYchange = value; 
+        maxYInput.value = "";
+        document.getElementById('currentWidth').textContent = maxYchange;
+        console.log('maxYchange updated:', maxYchange);
+    } else {
+        console.error('Invalid input for maxY:', maxYInput.value);
+        alert('Please enter a valid number for Width between 0 and 100.');
     }
 }
 
