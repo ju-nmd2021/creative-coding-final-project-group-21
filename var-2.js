@@ -1,4 +1,4 @@
-let minYchange = 10;
+let minYchange = 0;
 let maxYchange = 50;
 
 let layers = 5;

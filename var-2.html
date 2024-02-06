@@ -11,17 +11,17 @@
 
     <h1>Rotate Stripe</h1>
 
-    <form id="rotateForm">
+    <form>
         <label for="rotStripeInput">Enter rotation value (0-90): </label>
         <input type="number" id="rotStripeInput" name="rotStripeInput" min="0" max="90" required>
-        <button type="button" onclick="changeRotation()">Change Rotation</button>
+        <button type="button" onclick="changeRotation()"><strong>Change</strong></button>
     </form>
 
     <div id="canvasContainer">
-        <button id="changeImageButton" onclick="changeImage()">Generation</button>
-        <button id="saveImageButton" onclick="saveImage()">Save Image</button>
+        <button id="changeImageButton" onclick="changeImage()"><strong>Generation</strong></button>
+        <button id="saveImageButton" onclick="saveImage()"><strong>Save Image</strong> </button>
     </div>
-    
+
     <p id="result">Current rotation value: <span id="currentRotation">0</span></p>
 
 
