@@ -9,7 +9,7 @@
 
 <body>
 
-    <h2>Rotate Stripe Form</h2>
+    <h1>Rotate Stripe</h1>
 
     <form id="rotateForm">
         <label for="rotStripeInput">Enter rotation value (0-90): </label>
@@ -17,7 +17,13 @@
         <button type="button" onclick="changeRotation()">Change Rotation</button>
     </form>
 
+    <div id="canvasContainer">
+        <button id="changeImageButton" onclick="changeImage()">Generation</button>
+        <button id="saveImageButton" onclick="saveImage()">Save Image</button>
+    </div>
+    
     <p id="result">Current rotation value: <span id="currentRotation">0</span></p>
+
 
 
     <script src="var-2.js"></script>

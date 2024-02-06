@@ -2,11 +2,12 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
+    font-size: large;
 }
 
 label {
     font-weight: bold;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 input {
@@ -18,10 +19,29 @@ button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 button:hover {
+    background-color: #45a049;
+}
+#canvasContainer {
+    position: relative;
+}
+#changeImageButton, #saveImageButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(112, 112, 112);
+    color: white;
+    border-radius: 4px;
+}
+#saveImageButton {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+}
+#changeImageButton:hover, #saveImageButton:hover {
     background-color: #45a049;
 }
