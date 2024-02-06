@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="var-2.css">
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <h2>Rotate Stripe Form</h2>
+
+    <form id="rotateForm">
+        <label for="rotStripeInput">Enter rotation value (0-90): </label>
+        <input type="number" id="rotStripeInput" name="rotStripeInput" min="0" max="90" required>
+        <button type="button" onclick="changeRotation()">Change Rotation</button>
+    </form>
+
+    <p id="result">Current rotation value: <span id="currentRotation">0</span></p>
+
+
+    <script src="var-2.js"></script>
+
+</body>
+</html>
+
+

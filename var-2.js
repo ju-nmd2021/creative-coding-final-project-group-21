@@ -1,25 +1,22 @@
-
-// Initial minY and maxY values
 let minYchange = 10;
 let maxYchange = 80;
 
-// Function to update minY value
-function updateMinY() {
-    const minYInput = document.getElementById('minY');
-    minYchange = parseInt(minYInput.value, 10);
-    console.log('minYchange updated:', minYchange);
-}
-
-// Function to update maxY value
-function updateMaxY() {
-    const maxYInput = document.getElementById('maxY');
-    maxYchange = parseInt(maxYInput.value, 10);
-    console.log('maxYchange updated:', maxYchange);
-}
-
 let layers = 5;
+
+// Initial angle is 0 
 let rotStripe = 0;
 
+        function changeRotation() {
+            const inputElement = document.getElementById('rotStripeInput');
+            const rotationValue = parseInt(inputElement.value);
+
+            if (!isNaN(rotationValue) && rotationValue >= 0 && rotationValue <= 90) {
+                rotStripe = rotationValue;
+                document.getElementById('currentRotation').textContent = rotStripe;
+            } else {
+                alert('Please enter a valid rotation value between 0 and 90.');
+            }
+        }
 
 let lines = true;
 let alph = 255; 
