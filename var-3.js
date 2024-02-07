@@ -1,8 +1,8 @@
 // Var 1
 let minYchange = 10;
-let maxYchange = 50;
+let maxYchange = 200;
 
-let layers = 5;
+let layers = 3;
 
 // Var 2
 let rotStripe = 0;
@@ -10,8 +10,20 @@ let rotStripe = 0;
 // Color Alph change (Var 3)
 // Initial alph is 100, the avalible value is 0-255
 let lines = false;
-
 let alph = 100;
+
+function changeAlph() {
+    const inputElement = document.getElementById('alphInput');
+    const alphValue = parseInt(inputElement.value);
+   
+    if (!isNaN(alphValue) && alphValue >= 0 && alphValue <= 255) {
+        alph = alphValue;
+        document.getElementById('currentAlph').textContent = alph;
+        inputElement.value = "";
+    } else {
+        alert('Please enter a valid alpha value between 0 and 255.');
+    }
+}
 
 let colRand = false; 
 let filling = true;
