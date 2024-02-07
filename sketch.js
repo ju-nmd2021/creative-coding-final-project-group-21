@@ -4,12 +4,10 @@
    click on canvas = new; s for jpg
    Mess with variables below.  */
 
-   let minYchange = 10; //最小值是0, more overlap,波纹多陡  //these two ranges determine line overlap and width
-   let maxYchange = 80;//最小值100，最大值1000 //thicker line
-
-   let layers = 5;//在 1-10个layers中选择合适的层级
-   let rotStripe = 0;//角度0-90度变化 //rotation of each stripe; try 10 or 90;
-
+   let minYchange = 0; //these two ranges determine line overlap and width
+   let maxYchange = 50;
+   let layers = 5;
+   let rotStripe = 0; //rotation of each stripe; try 10 or 90;
    // try lines = true with high alph or lines = false with low alph (100)
    let lines = true;
    let alph = 255; //out of 255
