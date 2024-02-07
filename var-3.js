@@ -33,8 +33,6 @@ function changeAlph() {
     }
 }
 
-
-
 let colRand = false; 
 let filling = true;
 let colorLines = false; 

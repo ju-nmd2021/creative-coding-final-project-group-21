@@ -4,17 +4,24 @@ let maxYchange = 50;
 let layers = 5;
 
 // Initial angle is 50, the angle avalible value is 0-90 
-let rotStripe = 50;
+// Check if there's a stored value in localStorage, otherwise set it to 50
+let rotStripe = localStorage.getItem('rotStripe') ? parseInt(localStorage.getItem('rotStripe')) : 50;
+// Ensure that the value in localStorage is always 50
+localStorage.setItem('rotStripe', 50);
+document.getElementById('currentRotation').textContent = rotStripe;
 
 function changeRotation() {
- const inputElement = document.getElementById('rotStripeInput');
- const rotationValue = parseInt(inputElement.value);
-
-  if (!isNaN(rotationValue) && rotationValue >= 0 && rotationValue <= 90) {
-   rotStripe = rotationValue;
-   document.getElementById('currentRotation').textContent = rotStripe;
- } else {
-   alert('Please enter a valid rotation value between 0 and 90.');
+    const inputElement = document.getElementById('rotStripeInput');
+    const rotationValue = parseInt(inputElement.value);
+   
+    if (!isNaN(rotationValue) && rotationValue >= 0 && rotationValue <= 90) {
+        rotStripe = rotationValue;
+        // Ignore the input value and always set the value to 50 in localStorage
+        localStorage.setItem('rotStripe', 50);
+        document.getElementById('currentRotation').textContent = rotStripe;
+        inputElement.value = "";
+    } else {
+        alert('Please enter a valid rotation value between 0 and 90.');
     }
 }
 
