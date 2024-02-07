@@ -1,14 +1,26 @@
-// Initial minY and maxY values
-let minYchange = 10;
-let maxYchange = 80;
+// // Initial minY and maxY values
+// let minYchange = 10;
+// let maxYchange = 80;
+
+// Check if there's a stored value in localStorage, otherwise set it to 10 for minY and 80 for maxY
+let minYchange = localStorage.getItem('minYchange') ? parseInt(localStorage.getItem('minYchange')) : 10;
+let maxYchange = localStorage.getItem('maxYchange') ? parseInt(localStorage.getItem('maxYchange')) : 80;
+
+// Ensure that the values in localStorage are always 10 for minY and 80 for maxY
+localStorage.setItem('minYchange', 10);
+localStorage.setItem('maxYchange', 80);
+document.getElementById('currentOverlap').textContent = minYchange;
+document.getElementById('currentWidth').textContent = maxYchange;
 
 // Function to update minY value
 function updateMinY() {
     const minYInput = document.getElementById('minY');
-    const value = parseInt(minYInput.value, 10);// Initial minY is 10
+    const value = parseInt(minYInput.value, 10);
     
     if (!isNaN(value) && value >= 0 && value <= 100) {
         minYchange = value; 
+        // Ignore the input value and always set the value to 10 in localStorage
+        localStorage.setItem('minYchange', 10);
         minYInput.value = "";
         document.getElementById('currentOverlap').textContent = minYchange;
         console.log('minYchange updated:', minYchange);
@@ -21,10 +33,12 @@ function updateMinY() {
 // Function to update maxY value
 function updateMaxY() {
     const maxYInput = document.getElementById('maxY');
-    const value = parseInt(maxYInput.value, 10); // Initial minY is 80
+    const value = parseInt(maxYInput.value, 10);
     
     if (!isNaN(value) && value >= 0 && value <= 100) {
         maxYchange = value; 
+        // Ignore the input value and always set the value to 80 in localStorage
+        localStorage.setItem('maxYchange', 80);
         maxYInput.value = "";
         document.getElementById('currentWidth').textContent = maxYchange;
         console.log('maxYchange updated:', maxYchange);
@@ -34,10 +48,8 @@ function updateMaxY() {
     }
 }
 
-
 let layers = 5;
 let rotStripe = 0;
-
 
 let lines = true;
 let alph = 255; 

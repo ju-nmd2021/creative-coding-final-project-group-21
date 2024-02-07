@@ -4,6 +4,7 @@ let maxYchange = 50;
 let layers = 5;
 
 // Initial angle is 50, the angle avalible value is 0-90 
+
 // Check if there's a stored value in localStorage, otherwise set it to 50
 let rotStripe = localStorage.getItem('rotStripe') ? parseInt(localStorage.getItem('rotStripe')) : 50;
 // Ensure that the value in localStorage is always 50
