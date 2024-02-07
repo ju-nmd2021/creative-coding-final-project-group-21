@@ -3,8 +3,8 @@ let maxYchange = 50;
 
 let layers = 5;
 
-// Initial angle is 0, the angle avalible value is 0-90 
-let rotStripe = 0;
+// Initial angle is 50, the angle avalible value is 0-90 
+let rotStripe = 50;
 
 function changeRotation() {
  const inputElement = document.getElementById('rotStripeInput');

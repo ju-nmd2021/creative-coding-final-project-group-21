@@ -12,18 +12,28 @@ let rotStripe = 0;
 let lines = false;
 let alph = 100;
 
+// Check if there's a stored value in localStorage, otherwise set it to 100
+let alphElement = localStorage.getItem('alph') ? parseInt(localStorage.getItem('alph')) : 100;
+// Ensure that the value in localStorage is always 100
+localStorage.setItem('alph', 100);
+document.getElementById('currentAlph').textContent = alph;
+
 function changeAlph() {
     const inputElement = document.getElementById('alphInput');
     const alphValue = parseInt(inputElement.value);
    
     if (!isNaN(alphValue) && alphValue >= 0 && alphValue <= 255) {
         alph = alphValue;
+        // Ignore the input value and always set the value to 100 in localStorage
+        localStorage.setItem('alph', 100);
         document.getElementById('currentAlph').textContent = alph;
         inputElement.value = "";
     } else {
         alert('Please enter a valid alpha value between 0 and 255.');
     }
 }
+
+
 
 let colRand = false; 
 let filling = true;
