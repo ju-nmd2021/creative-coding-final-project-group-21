@@ -11,11 +11,13 @@ let rotStripe = 0;
 let lines = true;
 let alph = 255; 
 
-
 let colRand = false; 
+
+// Var 4
 let filling = true;
 let colorLines = false; 
 let sw = 3; 
+
 let extraBlack = 0; 
 let extraBlackAlph = 255; 
 let r, g, b;
