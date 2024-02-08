@@ -22,14 +22,14 @@ function changeAlph() {
     const inputElement = document.getElementById('alphInput');
     const alphValue = parseInt(inputElement.value);
    
-    if (!isNaN(alphValue) && alphValue >= 0 && alphValue <= 255) {
+    if (!isNaN(alphValue) && alphValue >= 10 && alphValue <= 255) {
         alph = alphValue;
         // Ignore the input value and always set the value to 100 in localStorage
         localStorage.setItem('alph', 100);
         document.getElementById('currentAlph').textContent = alph;
         inputElement.value = "";
     } else {
-        alert('Please enter a valid alpha value between 0 and 255.');
+        alert('Please enter a valid alpha value between 10 and 255.');
     }
 }
 
