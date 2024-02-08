@@ -59,6 +59,7 @@ function preload() {
    
 function setup() {
     createCanvas(windowWidth-20, windowHeight-20);
+    background(255,255,255);
      
      if (lines == true) {
        stroke(0, 0, 0, extraBlackAlph);
