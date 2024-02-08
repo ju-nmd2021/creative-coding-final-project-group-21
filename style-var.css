@@ -45,3 +45,18 @@ button:hover {
 #changeImageButton:hover, #saveImageButton:hover {
     background-color: #45a049;
 }
+.back-link {
+    padding: 5px 10px; 
+    background-color:  rgb(125, 125, 125); 
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute; 
+    top: 30px; 
+    left: 35px; 
+    font-size: medium;
+}
+
+.back-link:hover {
+    background-color:  #45a049; 
+}
