@@ -31,14 +31,14 @@ function changeAlph() {
     } else {
         alert('Please enter a valid alpha value between 10 and 255.');
     }
-}
+} // To keeping it meaningful, the min alph should change to 10
 
 let colRand = false; 
 let filling = true;
 let colorLines = false; 
 let sw = 3; 
 let extraBlack = 0; 
-let extraBlackAlph = 255; 
+let extraBlackAlph = 0; 
 let r, g, b;
 let table;
 
@@ -48,7 +48,8 @@ function preload() {
 
 function setup() {
     createCanvas(windowWidth-50, windowHeight-30);
-    
+    background(255,255,255);
+
     if (lines == true) {
         stroke(0, 0, 0, extraBlackAlph);
         strokeWeight(sw);

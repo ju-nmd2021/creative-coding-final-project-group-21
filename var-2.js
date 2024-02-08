@@ -127,5 +127,5 @@ function changeImage() {
 }
 
 function saveImage() {
-    save("mmyCanvasVar2.jpg");
+    save("myCanvasVar2.jpg");
 }
